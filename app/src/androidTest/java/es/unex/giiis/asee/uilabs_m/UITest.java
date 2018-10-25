@@ -35,16 +35,16 @@ public class UITest {
         // Perform typeText() and closeSoftKeyboard() actions on R.id.title
         onView(withId(R.id.title)).perform(typeText(testingString), closeSoftKeyboard());
         //TODO - Perform a click() action on R.id.submitButton
-        onView(withId(R.id.submitButton)).perform(click());
+
         // Check that R.id.my_recycler_view hasDescendant withId R.id.titleView
         onView(withId(R.id.my_recycler_view)).check(matches(hasDescendant(withId(R.id.titleView))));
         //TODO - Check that R.id.my_recycler_view hasDescendant with the input text
-        onView(withId(R.id.my_recycler_view)).check(matches(hasDescendant(withText(testingString))));
+
         // Check that R.id.my_recycler_view hasDescendant withId R.id.statusCheckBox
         onView(withId(R.id.my_recycler_view)).check(matches(hasDescendant(withId(R.id.statusCheckBox))));
         // Open Contextual Action Mode Overflow Menu
         openContextualActionModeOverflowMenu();
         //TODO - Perform a click() action on the view withText "Delete all" (Should be a R.string.* reference)
-        onView(withText("Delete all")).perform(click()); //Hacer con R.string.id
+        
     }
 }
