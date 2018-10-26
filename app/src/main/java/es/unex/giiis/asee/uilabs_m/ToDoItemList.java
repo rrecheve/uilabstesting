@@ -20,7 +20,7 @@ public class ToDoItemList {
     }
 
     public void updateItem(int position, ToDoItem item){
-        elements.get(position).setStatus(item.getStatus());
+        elements.get(position).setStatus(ToDoItem.Status.NOTDONE);
     }
 
     public ToDoItem get(int position){
