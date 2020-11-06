@@ -6,8 +6,6 @@ import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +20,8 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 import java.util.Date;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import es.unex.giiis.asee.uilabs_m.ToDoItem.Priority;
 import es.unex.giiis.asee.uilabs_m.ToDoItem.Status;
 

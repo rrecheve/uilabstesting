@@ -2,16 +2,13 @@ package es.unex.giiis.asee.uilabs_m;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -25,10 +22,14 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.Date;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import es.unex.giiis.asee.uilabs_m.ToDoItem.Priority;
 import es.unex.giiis.asee.uilabs_m.ToDoItem.Status;
 
-public class ToDoManagerActivity extends AppCompatActivity{
+public class ToDoManagerActivity extends AppCompatActivity {
 
     // Add a ToDoItem Request Code
     private static final int ADD_TODO_ITEM_REQUEST = 0;
@@ -86,15 +87,15 @@ public class ToDoManagerActivity extends AppCompatActivity{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+        super.onActivityResult(requestCode, resultCode, data);
         log("Entered onActivityResult()");
 
         // TODO - Check result code and request code.
         // If user submitted a new ToDoItem
         // Create a new ToDoItem from the data Intent
         // and then add it to the adapter
-        if (requestCode == ADD_TODO_ITEM_REQUEST){
-            if (resultCode == RESULT_OK){
+        if (requestCode == ADD_TODO_ITEM_REQUEST) {
+            if (resultCode == RESULT_OK) {
                 ToDoItem item = new ToDoItem(data);
                 mAdapter.add(item);
             }
